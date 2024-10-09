@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@crispengari/react-emojify':
+        specifier: ^0.1.1
+        version: 0.1.1(react@18.3.1)
       next:
         specifier: 14.2.14
         version: 14.2.14(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -51,6 +54,12 @@ packages:
   '@alloc/quick-lru@5.2.0':
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
     engines: {node: '>=10'}
+
+  '@crispengari/react-emojify@0.1.1':
+    resolution: {integrity: sha512-aeg5JeGUSBihLP1Mr2Ma6vH8hbhJRMLHFr6kWgtfCbT72DQEZkJTrEQMW/WChRjFnaHGLOsXNn8jBMRKEYWIqg==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: '>=16'
 
   '@eslint-community/eslint-utils@4.4.0':
     resolution: {integrity: sha512-1/sA4dwrzBAyeUoQ6oxahHKmrZvsnLCg4RfxW3ZFGGmQkSNQPFNLV9CUEFQP1x9EYXHTo5p6xdhZM1Ne9p/AfA==}
@@ -1544,6 +1553,10 @@ packages:
 snapshots:
 
   '@alloc/quick-lru@5.2.0': {}
+
+  '@crispengari/react-emojify@0.1.1(react@18.3.1)':
+    dependencies:
+      react: 18.3.1
 
   '@eslint-community/eslint-utils@4.4.0(eslint@8.57.1)':
     dependencies:
