@@ -6,7 +6,7 @@ interface feature {
     title: string,
     text:string
 }
-const features: feature[] = [
+export const features: feature[] = [
     {
         emoji:'📈',
         title:"title 1",
