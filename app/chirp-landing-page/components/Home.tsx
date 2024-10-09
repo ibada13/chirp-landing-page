@@ -2,16 +2,7 @@ import Image from "next/image"
 import HeroImage from '@/app/chirp-landing-page/components/Assets/hero-image-desktop.png'
 import { Button } from "./ui/button"
 import { BsArrowRight } from "react-icons/bs"
-import user1 from './Assets/user-1.svg'
-import user2 from './Assets/user-2.svg'
-import user3 from './Assets/user-3.svg'
-import user4 from './Assets/user-4.svg'
-import user5 from './Assets/user-5.svg'
-import user6 from './Assets/user-6.svg'
-import user7 from './Assets/user-7.svg'
-import user8 from './Assets/user-8.svg'
-import user9 from './Assets/user-9.svg'
-
+import { clients } from "./lib/data"
 export default function Home() { 
     return (
         <div className="w-4/5 flex h-auto mt-10 gap-x-10 mb-10">
@@ -38,15 +29,11 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="flex ml-5">
-                    <Image className="-ml-5" src={user1} alt="user1"/>
-                    <Image className="-ml-5" src={user2} alt="user2"/>
-                    <Image className="-ml-5" src={user3} alt="user3"/>
-                    <Image className="-ml-5" src={user4} alt="user4"/>
-                    <Image className="-ml-5" src={user5} alt="user5"/>
-                    <Image className="-ml-5" src={user6} alt="user6"/>
-                    <Image className="-ml-5" src={user7} alt="user7"/>
-                    <Image className="-ml-5" src={user8} alt="user8"/>
-                    <Image className="-ml-5" src={user9} alt="user9"/>
+                    {clients.map((client, i) => (
+                        <Image key={`client-${i}`} className="-ml-5" src={client} alt={`picture of client number ${i}`} />
+                    ))
+                    }
+
 
                 </div>
                 <div className="ml-2">
