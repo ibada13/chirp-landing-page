@@ -13,6 +13,9 @@ const config: Config = {
         foreground: "var(--foreground)",
         twitter: "#1DA1F2",
       },
+      screens: {
+        "sm":"480px",
+      }
     },
   },
   plugins: [],

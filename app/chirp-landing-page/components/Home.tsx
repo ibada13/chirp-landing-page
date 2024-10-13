@@ -1,12 +1,14 @@
 import Image from "next/image"
-import HeroImage from '@/app/chirp-landing-page/components/Assets/hero-image-desktop.png'
+import HeroImageDesktop from '@/app/chirp-landing-page/components/Assets/hero-image-desktop.png'
+import HeroImageMobile from '@/app/chirp-landing-page/components/Assets/hero-image-mobile.png'
+
 import { Button } from "./ui/button"
 import { BsArrowRight } from "react-icons/bs"
 import { clients } from "./lib/data"
 export default function Home() { 
     return (
-        <div className="w-4/5 flex h-auto mt-10 gap-x-10 mb-10">
-            <div className="w-3/5  flex flex-col h-auto  gap-y-5 p-l  flex-grow" >
+        <div className="w-4/5 flex md:flex-row flex-col-reverse h-auto mt-10 gap-10 mb-10">
+            <div className="w-full md:w-3/5  flex flex-col h-auto  gap-y-5 p-1" >
                 <div>
                     <p className="font-bold text-5xl"> 
                         Twitter analytic take to the whole new level .
@@ -44,8 +46,12 @@ export default function Home() {
                 </div>
 
             </div>
-            <div className="bg-green-500 w-2/5">
-                <Image className="h-full" alt="hero-image" src={HeroImage} />
+            <div className="bg-green-500 flex-1 flex ">
+                { /* */}
+                <Image layout="responsive" className="h-full w-full md:block hidden" alt="hero-image" src={HeroImageDesktop} />
+                { /* */}
+                <Image layout="responsive" className="h-full w-full md:hidden block" alt="hero-image" src={HeroImageMobile} />
+
 
             </div>
 
