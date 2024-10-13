@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 .dark {
-  --home-rgb:var(--background);
-  --default-rgb: var(--background);
-  --plan-rgb: var(--background);
+  --home-rgb:10,10,10;
+  --default-rgb: 10,10,10;
+  --plan-rgb: 10,10,10;
   --plan-border-rgb: 251, 191, 36;
-  --clients-rgb: var(--background);
+  --clients-rgb: 10,10,10;
   --background-rgb: 255, 255, 255; /* Example value */
   --foreground-rgb: 0, 0, 0;       /* Example value */
   --twitter-rgb: 29, 161, 242;

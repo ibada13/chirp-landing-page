@@ -1,12 +1,51 @@
 import Image from "next/image"
 import HeroImageDesktop from '@/app/chirp-landing-page/components/Assets/hero-image-desktop.png'
 import HeroImageMobile from '@/app/chirp-landing-page/components/Assets/hero-image-mobile.png'
-
+import { CiDark } from "react-icons/ci";
+import { CiSun } from "react-icons/ci";
 import { Button } from "./ui/button"
 import { BsArrowRight } from "react-icons/bs"
 import { clients } from "./lib/data"
+import Nav from "./NavBar"
+import { useEffect, useState } from "react"
 export default function Home() { 
+    const [theme, setTheme] = useState('light');
+
+    // Apply theme based on user preference or system default
+    useEffect(() => {
+      const storedTheme = localStorage.getItem('theme');
+      const userPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  
+      if (storedTheme) {
+        setTheme(storedTheme);
+        document.body.classList.add(storedTheme); // Apply 'dark' or 'light'
+      } else if (userPrefersDark) {
+        setTheme('dark');
+        document.body.classList.add('dark');
+      } else {
+        document.body.classList.add('light');
+      }
+    }, []);
+  
+    // Toggle the theme and save preference in localStorage
+    const toggleTheme = () => {
+      const newTheme = theme === 'light' ? 'dark' : 'light';
+      setTheme(newTheme);
+  
+      // Remove previous theme class and add new one
+      document.body.classList.remove(theme); // Remove current theme ('light' or 'dark')
+      document.body.classList.add(newTheme); // Add new theme ('light' or 'dark')
+  
+      localStorage.setItem('theme', newTheme);
+    };
+  
     return (
+        <div className=" h-auto w-screen flex flex-col items-center bg-home">
+            <button onClick={toggleTheme} className=" transition-all duration-300">
+                {theme==="dark"?<CiSun size={50} className="text-amber-300"/>:<CiDark size={50} className="text-purple-400"/>}
+            </button>
+            <Nav />
+
         <div className="w-4/5 flex md:flex-row flex-col-reverse h-auto mt-10 gap-10 mb-10 bg-home">
             <div className="w-full md:w-3/5  flex flex-col h-auto  gap-y-5 p-1" >
                 <div>
@@ -34,7 +73,7 @@ export default function Home() {
                     {clients.map((client, i) => (
                         <Image key={`client-${i}`} className="-ml-5" src={client} alt={`picture of client number ${i}`} />
                     ))
-                    }
+                }
 
 
                 </div>
@@ -56,5 +95,6 @@ export default function Home() {
             </div>
 
         </div>
+                </div>
     )
 }

@@ -1,3 +1,4 @@
+'use client';
 import Nav from "./components/NavBar";
 import Home from "./components/Home";
 import Features from "./components/Features";
@@ -7,7 +8,6 @@ import Footer from "./components/Footer";
 export default function page() { 
     return (
         <div className="h-screen w-screen flex flex-col items-center overflow-x-hidden">
-            <Nav />
             <Home />
             <Features />
             <Clients />
