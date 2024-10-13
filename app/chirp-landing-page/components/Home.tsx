@@ -7,7 +7,7 @@ import { BsArrowRight } from "react-icons/bs"
 import { clients } from "./lib/data"
 export default function Home() { 
     return (
-        <div className="w-4/5 flex md:flex-row flex-col-reverse h-auto mt-10 gap-10 mb-10">
+        <div className="w-4/5 flex md:flex-row flex-col-reverse h-auto mt-10 gap-10 mb-10 bg-home">
             <div className="w-full md:w-3/5  flex flex-col h-auto  gap-y-5 p-1" >
                 <div>
                     <p className="font-bold text-5xl"> 

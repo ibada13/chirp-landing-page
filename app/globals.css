@@ -2,10 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.dark {
+  --home-rgb:var(--background);
+  --default-rgb: var(--background);
+  --plan-rgb: var(--background);
+  --plan-border-rgb: 251, 191, 36;
+  --clients-rgb: var(--background);
+  --background-rgb: 255, 255, 255; /* Example value */
+  --foreground-rgb: 0, 0, 0;       /* Example value */
+  --twitter-rgb: 29, 161, 242;
+  --text-rgb:255 , 255 , 255;
 }
+
+
+.light {
+  --home-rgb: 251, 248, 243;
+  --default-rgb: 255, 255, 255;
+  --plan-rgb: 251,248,243;
+  --plan-border-rgb: 255, 180, 54;
+  --clients-rgb: 215, 245, 245;
+  --background-rgb: 255, 255, 255; /* Example value */
+  --foreground-rgb: 0, 0, 0;       /* Example value */
+  --twitter-rgb: 29, 161, 242;
+  --text-rgb:0 , 0 , 0;
+}
+
 
 @media (prefers-color-scheme: dark) {
   :root {

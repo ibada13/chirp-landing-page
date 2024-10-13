@@ -4,7 +4,7 @@ import { BsTwitter } from "react-icons/bs";
 import { BiHeart } from "react-icons/bi";
 export default function ClientsCard({ ClientReview }: {ClientReview:clientReview}) { 
     return (
-        <div className="flex flex-col gap-4 border  border-purple-300 p-4 rounded-md w-full self-start flex-grow">
+        <div className="flex flex-col gap-4 border  border-purple-300 p-4 rounded-md w-full self-start flex-grow bg-default">
             <div className="flex justify-between gap-x-4 flex-grow">
                 <div className="flex-grow flex gap-x-2">
                     <Image src={ClientReview.pfpSrc} alt={`${ClientReview.name} picture's`} />
