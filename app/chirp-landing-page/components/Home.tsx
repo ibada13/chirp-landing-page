@@ -85,7 +85,7 @@ export default function Home() {
                 </div>
 
             </div>
-            <div className="bg-green-500 flex-1 flex ">
+            <div className=" flex-1 flex ">
                 { /* */}
                 <Image layout="responsive" className="h-full w-full md:block hidden" alt="hero-image" src={HeroImageDesktop} />
                 { /* */}

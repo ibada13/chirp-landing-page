@@ -11,7 +11,7 @@ import user9 from '../Assets/user-9.svg'
 export const clients = [user1, user2, user3, user4, user5, user6, user7, user8, user9];
 
 export interface feature {
-    emoji:String,
+    emoji:string,
     title: string,
     text:string
 }

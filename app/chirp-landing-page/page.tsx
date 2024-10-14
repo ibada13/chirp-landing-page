@@ -1,5 +1,4 @@
 'use client';
-import Nav from "./components/NavBar";
 import Home from "./components/Home";
 import Features from "./components/Features";
 import Clients from "./components/Clients";
