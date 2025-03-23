@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Chirp Landing Page  
 
-## Getting Started
+A modern and responsive landing page for **Chirp**, a Twitter analytics platform. This page provides insights into engagement, follower trends, and scheduling features.
 
-First, run the development server:
+## 🖥️ Tech Stack  
+- **Next.js** – For optimized React rendering  
+- **Tailwind CSS** – For responsive styling  
+- **React Icons** – For beautiful icons  
+- **Local Storage** – To store theme preference (dark/light mode)  
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## ✨ Features  
+- 🌗 **Dark/Light Mode Toggle** – Smooth transition between themes  
+- 📊 **Analytics Overview** – Display Twitter insights effectively  
+- ⚡ **Fast & Responsive** – Works seamlessly on all devices  
+- 📸 **Client Logos Section** – Showcasing trusted brands  
+
+
+## 🚀 Setup & Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/ibada13/chirp-landing-page.git
+   cd chirp-landing-page
+   ```
+
+2. Install dependencies using pnpm:
+   ```bash
+   pnpm install
+   ```
+
+3. Run the development server:
+   ```bash
+   pnpm dev
+   ```
+
+4. Build & export the static site:
+   ```bash
+   pnpm build && pnpm export
+   ```
+
+## 🖼️ Assets Location
+All images, logos, and other assets are stored in the `lib/assets/` directory. If you encounter missing assets, ensure the correct import path:
+```js
+import Logo from '@/components/assets/';
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📜 License
+This project is open-source and available under the [MIT License](LICENSE).

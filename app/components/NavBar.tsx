@@ -6,16 +6,14 @@ import { BsList } from "react-icons/bs";
 import Logo from "./ui/logo";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 const Nav = () => {
-    // State to manage mobile menu visibility
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    // Function to toggle the menu visibility
     const toggleMenu = () => {
         setIsMenuOpen(prevState => !prevState);
     };
 
     return (
-        <div className="flex w-4/5 mt-12 relative bg-home "> {/* Add relative for absolute positioning */}
+        <div className="flex w-4/5 mt-12 relative bg-home "> 
             <div className="flex-grow basis-auto md:basis-full">
                 <Logo />
             </div>
@@ -25,7 +23,6 @@ const Nav = () => {
                 <Link className='hover:text-twitter transition-all duration-300' href="">FAQ</Link>
                 <Button />
             </div>
-            {/* Burger Menu Button for small screens */}
             <button className="sm:hidden block" onClick={toggleMenu}>
                {isMenuOpen? <IoIosCloseCircleOutline size={35} color='#ff0000'/>:<BsList className='text-twitter' size={35} />}
             </button>
