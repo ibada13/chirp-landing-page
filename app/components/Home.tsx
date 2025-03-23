@@ -1,6 +1,6 @@
 import Image from "next/image"
-import HeroImageDesktop from '@/app/chirp-landing-page/components/Assets/hero-image-desktop.png'
-import HeroImageMobile from '@/app/chirp-landing-page/components/Assets/hero-image-mobile.png'
+import HeroImageDesktop from '@/app/components/Assets/hero-image-desktop.png'
+import HeroImageMobile from '@/app/components/Assets/hero-image-mobile.png'
 import { CiDark } from "react-icons/ci";
 import { CiSun } from "react-icons/ci";
 import { Button } from "./ui/button"

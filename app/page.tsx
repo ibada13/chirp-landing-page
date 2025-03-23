@@ -1,18 +1,17 @@
-import Link from "next/link";
-export default function Home() {
-  return (
-    <div className="h-screen w-screen flex">
-      <div className="bg-red-500 w-1/3  flex justify-center items-center">
-        <p className="text-2xl uppercase text-center">Well code projects</p>
-      </div>
-      <div className="bg-black flex-grow basis-full flex flex-col items-center justify-center gap-4">
-        <Link href="/chirp-landing-page">chrip-landing-page</Link>
-        <Link href="">chrip-landing-page</Link>
-        <Link href="">chrip-landing-page</Link>
-        <Link href="">chrip-landing-page</Link>
-
-
-      </div>
-    </div>
-  );
+'use client';
+import Home from "./components/Home";
+import Features from "./components/Features";
+import Clients from "./components/Clients";
+import Plans from "./components/Plans";
+import Footer from "./components/Footer";
+export default function page() { 
+    return (
+        <div className="h-screen w-screen flex flex-col items-center overflow-x-hidden">
+            <Home />
+            <Features />
+            <Clients />
+            <Plans />
+            <Footer />
+        </div>
+    );
 }

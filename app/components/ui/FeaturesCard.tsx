@@ -4,7 +4,7 @@ export default function FeatureCard({feature} :{feature:feature}) {
     return (
         <div className='flex flex-col gap-3 border border-blue-400 p-3 rounded-md'>
                     <div >
-                        <p className='text-xl'>{ feature.emoji}</p>
+                        <p className='text-2xl'>{ feature.emoji}</p>
                     </div>
 
                     <div>
