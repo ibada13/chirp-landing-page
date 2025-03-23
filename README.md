@@ -41,7 +41,7 @@ A modern and responsive landing page for **Chirp**, a Twitter analytics platform
 ## 🖼️ Assets Location
 All images, logos, and other assets are stored in the `lib/assets/` directory. If you encounter missing assets, ensure the correct import path:
 ```js
-import Logo from '@/components/assets/';
+import Logo from '@/components/assets/Logo.svg';
 ```
 
 
